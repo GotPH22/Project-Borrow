@@ -1,8 +1,8 @@
 {
-  "name": "nv-webblog-client",
+  "name": "e-borrow-client",
   "version": "1.0.0",
-  "description": "nodejs vuejs webblog client",
-  "author": "Phonnaphat Homruen",
+  "description": "nodejs vuejs e-borrow client",
+  "author": "Wipada Wicharaphotn",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "scrollmonitor": "^1.2.4",
     "vue": "^2.5.2",
     "vue-ckeditor2": "^2.1.5",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",
+    "vue-sorted-table": "^1.2.0",
     "vuex": "^3.0.1",
     "vuex-persistedstate": "^2.5.4",
     "vuex-router-sync": "^5.0.0"

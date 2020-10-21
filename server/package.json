@@ -1,7 +1,7 @@
 {
-  "name": "nv-webblog-server",
+  "name": "e-borrow-server",
   "version": "1.0.0",
-  "description": "NodeJS VueJS Webblog Server (Backend).",
+  "description": "NodeJS VueJS E-borrow Server (Backend).",
   "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

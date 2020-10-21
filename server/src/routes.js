@@ -3,6 +3,8 @@ const UserAuthenController = require('./controllers/UserAuthenController')
 const isAuthenController = require('./authen/isAuthenController')
 const BlogController = require('./controllers/BlogController')
 const CommentController = require('./controllers/CommentController')
+const BorrowController = require('./controllers/BorrowController')
+
 let multer = require("multer")
 // upload section
 let storage = multer.diskStorage({
@@ -134,5 +136,43 @@ module.exports = (app) => {
         }
     })
 
-    
+    app.post('/front/login',
+        UserAuthenController.clientLogin
+    )
+
+    // get comment by id
+    app.get('/comment/blog/:blogId',
+        CommentController.blog
+    )
+    // get comment by id
+    app.get('/comment/user/:userId',
+        CommentController.user
+    )
+    // users
+    // get front
+    app.get('/users/front',
+        UserController.getFront
+    )
+
+    // borrow route
+    // create borrow
+    app.post('/borrow',
+        BorrowController.create
+    )
+    // edit borrow, suspend, active
+    app.put('/borrow/:borrowId',
+        BorrowController.put
+    )
+    // delete borrow
+    app.delete('/borrow/:borrowId',
+        BorrowController.remove
+    )
+    // get borrow by id
+    app.get('/borrow/:borrowId',
+        BorrowController.show
+    )
+    // get all borrow
+    app.get('/borrows',
+        BorrowController.index
+    )
 }
